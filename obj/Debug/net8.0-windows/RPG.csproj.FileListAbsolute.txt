@@ -1,0 +1,15 @@
+C:\Users\seane\OneDrive\Desktop\RPG\bin\Debug\net8.0-windows\RPG.exe
+C:\Users\seane\OneDrive\Desktop\RPG\bin\Debug\net8.0-windows\RPG.deps.json
+C:\Users\seane\OneDrive\Desktop\RPG\bin\Debug\net8.0-windows\RPG.runtimeconfig.json
+C:\Users\seane\OneDrive\Desktop\RPG\bin\Debug\net8.0-windows\RPG.dll
+C:\Users\seane\OneDrive\Desktop\RPG\bin\Debug\net8.0-windows\RPG.pdb
+C:\Users\seane\OneDrive\Desktop\RPG\obj\Debug\net8.0-windows\RPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seane\OneDrive\Desktop\RPG\obj\Debug\net8.0-windows\RPG.AssemblyInfoInputs.cache
+C:\Users\seane\OneDrive\Desktop\RPG\obj\Debug\net8.0-windows\RPG.AssemblyInfo.cs
+C:\Users\seane\OneDrive\Desktop\RPG\obj\Debug\net8.0-windows\RPG.csproj.CoreCompileInputs.cache
+C:\Users\seane\OneDrive\Desktop\RPG\obj\Debug\net8.0-windows\RPG.sourcelink.json
+C:\Users\seane\OneDrive\Desktop\RPG\obj\Debug\net8.0-windows\RPG.dll
+C:\Users\seane\OneDrive\Desktop\RPG\obj\Debug\net8.0-windows\refint\RPG.dll
+C:\Users\seane\OneDrive\Desktop\RPG\obj\Debug\net8.0-windows\RPG.pdb
+C:\Users\seane\OneDrive\Desktop\RPG\obj\Debug\net8.0-windows\RPG.genruntimeconfig.cache
+C:\Users\seane\OneDrive\Desktop\RPG\obj\Debug\net8.0-windows\ref\RPG.dll
