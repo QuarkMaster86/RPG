@@ -52,7 +52,6 @@ namespace Character
         public RadioButton Race4 = new RadioButton();
         public RadioButton Race5 = new RadioButton();
         public RadioButton Race6 = new RadioButton();
-        public RadioButton Race7 = new RadioButton();
         //Classes
         public Label classes = new Label();
         public RadioButton Class1 = new RadioButton();
@@ -62,9 +61,16 @@ namespace Character
         public RadioButton Class5 = new RadioButton();
         public RadioButton Class6 = new RadioButton();
         public RadioButton Class7 = new RadioButton();
-        public RadioButton Class8 = new RadioButton();
-        public RadioButton Class9 = new RadioButton();
-
+        //Items
+        public Label itemsLabel = new Label();
+        public RadioButton Item1 = new RadioButton();
+        public RadioButton Item2 = new RadioButton();
+        public RadioButton Item3 = new RadioButton();
+        public RadioButton Item4 = new RadioButton();
+        public RadioButton Item5 = new RadioButton();
+        public RadioButton Item6 = new RadioButton();
+        public RadioButton Item7 = new RadioButton();
+        public TextBox itemDescription = new TextBox();
         
         public CharacterSheet()
         {
@@ -120,14 +126,14 @@ namespace Character
 
             //Health n' things
             Info(healthPointsLabel, charismaLabel.Location.X, charismaLabel.Bottom + 7, "HP");
-            Info(armourPointsLabel, healthPointsLabel.Right + interboxDistance * 2, healthPointsLabel.Location.Y, "AR");
-            Info(staminaLabel, armourPointsLabel.Right + interboxDistance * 2, armourPointsLabel.Location.Y, "Stamina");
+            Info(armourPointsLabel, healthPointsLabel.Right + (interboxDistance * 3) / 2, healthPointsLabel.Location.Y, "AR");
+            Info(staminaLabel, armourPointsLabel.Right + (interboxDistance * 3) / 2, armourPointsLabel.Location.Y, "Stamina");
             Field(healthPointsText, healthPointsLabel.Location.X, healthPointsLabel.Bottom, healthPointsLabel.Width, false);
             Field(armourPointsText, armourPointsLabel.Location.X, armourPointsLabel.Bottom, armourPointsLabel.Width, false);
             Field(staminaText, staminaLabel.Location.X, staminaLabel.Bottom, staminaLabel.Width, false);
 
             //Races
-            Info(races, characterNameText.Location.X, characterNameText.Bottom, "Races");
+            Info(races, characterNameText.Location.X, characterNameText.Bottom + 5, "Races");
             RadialButton(humanRace, races.Location.X, races.Bottom, "Human");
             RadialButton(elfRace, humanRace.Location.X, humanRace.Bottom + 8, "Elf");
             RadialButton(Race1, humanRace.Location.X, elfRace.Bottom + 8, "Race1");
@@ -136,10 +142,37 @@ namespace Character
             RadialButton(Race4, humanRace.Location.X, Race3.Bottom + 8, "Race4");
             RadialButton(Race5, humanRace.Location.X, Race4.Bottom + 8, "Race5");
             RadialButton(Race6, humanRace.Location.X, Race5.Bottom + 8, "Race6");
-            RadialButton(Race7, humanRace.Location.X, Race6.Bottom + 8, "Race7");
             
             //Classes
             Info(classes, races.Location.X + 100, races.Location.Y, "Classes");
+            RadialButton(Class1, classes.Location.X, classes.Bottom, "Class1");
+            RadialButton(Class2, classes.Location.X, Class1.Bottom + 8, "Class2");
+            RadialButton(Class3, classes.Location.X, Class2.Bottom + 8, "Class3");
+            RadialButton(Class4, classes.Location.X, Class3.Bottom + 8, "Class4");
+            RadialButton(Class5, classes.Location.X, Class4.Bottom + 8, "Class5");
+            RadialButton(Class6, classes.Location.X, Class5.Bottom + 8, "Class6");
+            RadialButton(Class7, classes.Location.X, Class6.Bottom + 8, "Class7");
+
+            //Items
+            Info(itemsLabel, humanRace.Location.X, Race6.Bottom + 8, "Items");
+            RectangialButton(Item1, itemsLabel.Location.X, itemsLabel.Bottom, "Item1");
+            RectangialButton(Item2, itemsLabel.Location.X, Item1.Bottom, "Item2");
+            RectangialButton(Item3, itemsLabel.Location.X, Item2.Bottom, "Item3");
+            RectangialButton(Item4, itemsLabel.Location.X, Item3.Bottom, "Item4");
+            RectangialButton(Item5, itemsLabel.Location.X, Item4.Bottom, "Item5");
+            RectangialButton(Item6, itemsLabel.Location.X, Item5.Bottom, "Item6");
+            RectangialButton(Item7, itemsLabel.Location.X, Item6.Bottom, "Item7");
+
+            //Item Description
+            itemDescription.Location = new Point(Item1.Right + interboxDistance, Item1.Location.Y);
+            itemDescription.Text = "Place Holder";
+            itemDescription.Multiline = true;
+            itemDescription.ScrollBars = ScrollBars.Vertical;
+            itemDescription.WordWrap = true;
+            itemDescription.Width = 200;
+            itemDescription.Height = Item7.Bottom - Item1.Top;
+            itemDescription.ReadOnly = true;
+            Controls.Add(itemDescription);
         }
 
         public void Field(TextBox characterInfo, int x, int y, int size, bool canType)
@@ -168,8 +201,19 @@ namespace Character
             Label characterRaceName = new Label();
             characterRaceName.Text = text;
             characterRaceName.Location = new Point(x + 15, y);
+            characterRaceName.AutoSize = true;
+            characterRace.AutoSize = true;
             Controls.Add(characterRace);
             Controls.Add(characterRaceName);
+        }
+        public void RectangialButton(RadioButton itemPlaceHolder, int x, int y, string text)
+        {
+            itemPlaceHolder.Location = new Point(x, y);
+            itemPlaceHolder.Appearance = Appearance.Button;
+            itemPlaceHolder.Text = text;
+            //itemPlaceHolder.AutoSize = true;
+            itemPlaceHolder.Width = levelText.Right - 15;
+            Controls.Add(itemPlaceHolder);
         }
     }
 }
