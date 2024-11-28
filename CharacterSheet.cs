@@ -71,6 +71,7 @@ namespace Character
         public RadioButton Item6 = new RadioButton();
         public RadioButton Item7 = new RadioButton();
         public TextBox itemDescription = new TextBox();
+        public Label itemDescriptionLabel = new Label();
         
         public CharacterSheet()
         {
@@ -173,6 +174,7 @@ namespace Character
             itemDescription.Height = Item7.Bottom - Item1.Top;
             itemDescription.ReadOnly = true;
             Controls.Add(itemDescription);
+            Info(itemDescriptionLabel, itemDescription.Location.X, itemsLabel.Location.Y, "Item Description/Stats");
         }
 
         public void Field(TextBox characterInfo, int x, int y, int size, bool canType)

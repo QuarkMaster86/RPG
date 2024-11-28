@@ -1,3 +1,1 @@
-﻿using Character;
-
-Application.Run(new CharacterSheet());
+﻿Application.Run(new CharacterSheet.NewCharacterSheet());
